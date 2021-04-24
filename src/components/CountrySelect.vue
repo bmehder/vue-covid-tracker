@@ -1,7 +1,7 @@
 <template>
   <select @change="onChange()" class="form-select mt-1 block w-full border p-3 rounded mt-10" v-model="selected">
     <option value="0">Select Country</option>
-    <option v-for="country in countries" v-bind:value="country.ID">{{country.Country}}</option>
+    <option v-for="country in countries" :key="country.ID" v-bind:value="country.ID">{{country.Country}}</option>
   </select>
 </template>
 
